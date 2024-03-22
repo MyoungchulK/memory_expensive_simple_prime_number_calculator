@@ -30,7 +30,9 @@ def main(num):
     ## prime array
     prime_arr = num_arr[two_bool]
 
-    print('Tada!', prime_arr)
+    print('Tada!')
+    print(prime_arr)
+    print('# of primes:', len(prime_arr))
 
 if __name__ == "__main__":
     main()
