@@ -12,11 +12,8 @@ def main(num):
     ## num array
     num_arr = np.arange(1, num + 1, dtype = int)
 
-    ## denominator
-    denom = np.repeat(num_arr[np.newaxis, :], len(num_arr), axis = 0)
-
     ## residual
-    resi = num_arr[:, np.newaxis] % denom
+    resi = num_arr[:, np.newaxis] % num_arr[np.newaxis, :]
 
     ## zero bool
     zero_bool = resi == 0
